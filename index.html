@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusTech - Vitrine de Produtos de Tecnologia e Inovação</title>
+    <!-- Importação das folhas de estilo: reset.css deve vir obrigatoriamente antes de estilos.css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         1. CABEÇALHO SEMÂNTICO (<header>)
+         - Classe .container com largura fixa de 940px centralizada
+         - position: relative para ancorar elementos absolutos
+         - Logotipo em <h1> com texto descritivo no alt
+         - Sacola de compras fixada no canto superior direito
+         - Menu primário com 4+ links alinhado no canto inferior direito
+         ======================================================== -->
+    <header class="container">
+        <h1>
+            <img src="img/logo.png" alt="NexusTech - Produtos de Tecnologia e Inovação">
+        </h1>
+
+        <p class="sacola">
+            Sacola: <strong>0 itens</strong>
+        </p>
+
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#novidades">Novidades</a></li>
+                <li><a href="#mais-vendidos">Mais Vendidos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========================================================
+         2. ÁREA DE DESTAQUE COM BUSCA E MENU LATERAL
+         - Container de 940px centralizado
+         - Bloco de busca (float: left)
+         - Menu lateral de categorias (float: left; clear: left)
+         - Efeito sanfona em CSS puro no submenu (:hover -> display: block)
+         - Banner de destaque ao lado direito do conjunto
+         ======================================================== -->
+    <main class="container">
+        <section class="area-destaque" id="destaques">
+            <!-- Bloco de Formulário de Busca -->
+            <section class="busca">
+                <h2>Buscar Produtos</h2>
+                <form action="#" method="get">
+                    <input type="search" name="busca" placeholder="Digite o que procura...">
+                    <input type="image" src="img/busca.png" alt="Buscar">
+                </form>
+            </section>
+
+            <!-- Menu Lateral de Departamentos -->
+            <section class="menu-departamentos">
+                <h2>Departamentos</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Smartphones &amp; Tablets</a>
+                            <ul>
+                                <li><a href="#">Smartphones 5G</a></li>
+                                <li><a href="#">Tablets Pro</a></li>
+                                <li><a href="#">Acessórios e Capas</a></li>
+                                <li><a href="#">Carregadores por Indução</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Computadores &amp; Laptops</a>
+                            <ul>
+                                <li><a href="#">Notebooks Gamer</a></li>
+                                <li><a href="#">Ultrabooks com IA</a></li>
+                                <li><a href="#">Monitores OLED</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Áudio &amp; Wearables</a>
+                            <ul>
+                                <li><a href="#">Fones Noise Cancelling</a></li>
+                                <li><a href="#">Smartwatches Fitness</a></li>
+                                <li><a href="#">Caixas de Som Bluetooth</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drones &amp; Imagem 4K</a></li>
+                        <li><a href="#">Consoles &amp; Games</a></li>
+                        <li><a href="#">Smart Home &amp; IoT</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- Imagem em Banner de Destaque -->
+            <div class="banner-destaque">
+                <img src="img/destaque.png" alt="Lançamento Nexus Book Pro AI - Tela OLED 4K e Processador Neural">
+            </div>
+        </section>
+
+        <!-- ========================================================
+             3. VITRINE DE PRODUTOS COM DISPLAY INLINE-BLOCK
+             - Seção de produtos contendo seções irmãs: Novidades e Mais Vendidos
+             - Cada painel flutua lado a lado (float: left e float: right, largura ~445px)
+             - Estruturação em listas com <li> contendo <figure>, <img> e <figcaption>
+             - Itens <li> em display: inline-block com alinhamento vertical ao topo
+             - Fundo suave com linear-gradient() e border-radius
+             - Efeitos CSS3: hover com scale(1.15), box-shadow, rgba() e :nth-child com rotação
+             ======================================================== -->
+        <section class="vitrine">
+            <!-- Painel Novidades -->
+            <section class="painel novidades" id="novidades">
+                <h2>Novidades</h2>
+                <ol>
+                    <li>
+                        <figure>
+                            <img src="img/produto1.png" alt="Smartphone Nexus Pro Z">
+                            <figcaption>
+                                <h3>Smartphone Nexus Z</h3>
+                                <p class="preco">R$ 4.299,00</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/produto2.png" alt="Smartwatch Pulse Fit">
+                            <figcaption>
+                                <h3>Smartwatch Pulse Fit</h3>
+                                <p class="preco">R$ 1.199,00</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/produto3.png" alt="Headphone ANC Pro Hi-Fi">
+                            <figcaption>
+                                <h3>Headphone ANC Hi-Fi</h3>
+                                <p class="preco">R$ 899,00</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Painel Mais Vendidos -->
+            <section class="painel mais-vendidos" id="mais-vendidos">
+                <h2>Mais Vendidos</h2>
+                <ol>
+                    <li>
+                        <figure>
+                            <img src="img/produto4.png" alt="Notebook Gaming Titan AI">
+                            <figcaption>
+                                <h3>Notebook Titan AI</h3>
+                                <p class="preco">R$ 7.499,00</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/produto5.png" alt="Console Next 4K Ultra">
+                            <figcaption>
+                                <h3>Console Next 4K</h3>
+                                <p class="preco">R$ 3.899,00</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="img/produto6.png" alt="Drone Vision Explorer 4K">
+                            <figcaption>
+                                <h3>Drone Vision 4K</h3>
+                                <p class="preco">R$ 2.599,00</p>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </section>
+        </section>
+    </main>
+
+    <!-- ========================================================
+         4. RODAPÉ SEMÂNTICO E SUBSTITUIÇÃO DE IMAGEM (Image Replacement)
+         - <footer> com 100% de largura, fundo próprio e clear: both
+         - Container de 940px centralizado no centro da tela
+         - Lista de redes sociais com Image Replacement e seletores de atributo
+         ======================================================== -->
+    <footer>
+        <div class="container rodape-conteudo">
+            <div class="rodape-info">
+                <p class="copyright">&copy; 2026 NexusTech Loja de Tecnologia e Inovação. Todos os direitos reservados.</p>
+                <p class="disciplina">Desenvolvimento Web - Prof. Alyson Trindade Fernandes</p>
+            </div>
+
+            <!-- Redes Sociais com Image Replacement solicitada na especificação -->
+            <ul class="social">
+                <li><a href="http://facebook.com/minhaloja">Facebook</a></li>
+                <li><a href="http://twitter.com/minhaloja">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
