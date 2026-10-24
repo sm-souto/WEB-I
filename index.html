@@ -3,21 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexusTech - Vitrine de Produtos de Tecnologia e Inovação</title>
-    <!-- Importação das folhas de estilo: reset.css deve vir obrigatoriamente antes de estilos.css -->
+    <title>NexusTech | Vitrine de Produtos de Tecnologia e Inovação</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <!-- ========================================================
-         1. CABEÇALHO SEMÂNTICO (<header>)
-         - Classe .container com largura fixa de 940px centralizada
-         - position: relative para ancorar elementos absolutos
-         - Logotipo em <h1> com texto descritivo no alt
-         - Sacola de compras fixada no canto superior direito
-         - Menu primário com 4+ links alinhado no canto inferior direito
-         ======================================================== -->
     <header class="container">
         <h1>
             <img src="img/logo.png" alt="NexusTech - Produtos de Tecnologia e Inovação">
@@ -38,17 +29,8 @@
         </nav>
     </header>
 
-    <!-- ========================================================
-         2. ÁREA DE DESTAQUE COM BUSCA E MENU LATERAL
-         - Container de 940px centralizado
-         - Bloco de busca (float: left)
-         - Menu lateral de categorias (float: left; clear: left)
-         - Efeito sanfona em CSS puro no submenu (:hover -> display: block)
-         - Banner de destaque ao lado direito do conjunto
-         ======================================================== -->
     <main class="container">
         <section class="area-destaque" id="destaques">
-            <!-- Bloco de Formulário de Busca -->
             <section class="busca">
                 <h2>Buscar Produtos</h2>
                 <form action="#" method="get">
@@ -57,7 +39,6 @@
                 </form>
             </section>
 
-            <!-- Menu Lateral de Departamentos -->
             <section class="menu-departamentos">
                 <h2>Departamentos</h2>
                 <nav>
@@ -94,21 +75,11 @@
                 </nav>
             </section>
 
-            <!-- Imagem em Banner de Destaque -->
             <div class="banner-destaque">
                 <img src="img/destaque.png" alt="Lançamento Nexus Book Pro AI - Tela OLED 4K e Processador Neural">
             </div>
         </section>
 
-        <!-- ========================================================
-             3. VITRINE DE PRODUTOS COM DISPLAY INLINE-BLOCK
-             - Seção de produtos contendo seções irmãs: Novidades e Mais Vendidos
-             - Cada painel flutua lado a lado (float: left e float: right, largura ~445px)
-             - Estruturação em listas com <li> contendo <figure>, <img> e <figcaption>
-             - Itens <li> em display: inline-block com alinhamento vertical ao topo
-             - Fundo suave com linear-gradient() e border-radius
-             - Efeitos CSS3: hover com scale(1.15), box-shadow, rgba() e :nth-child com rotação
-             ======================================================== -->
         <section class="vitrine">
             <!-- Painel Novidades -->
             <section class="painel novidades" id="novidades">
@@ -180,26 +151,18 @@
         </section>
     </main>
 
-    <!-- ========================================================
-         4. RODAPÉ SEMÂNTICO E SUBSTITUIÇÃO DE IMAGEM (Image Replacement)
-         - <footer> com 100% de largura, fundo próprio e clear: both
-         - Container de 940px centralizado no centro da tela
-         - Lista de redes sociais com Image Replacement e seletores de atributo
-         ======================================================== -->
     <footer>
         <div class="container rodape-conteudo">
             <div class="rodape-info">
                 <p class="copyright">&copy; 2026 NexusTech Loja de Tecnologia e Inovação. Todos os direitos reservados.</p>
-                <p class="disciplina">Desenvolvimento Web - Prof. Alyson Trindade Fernandes</p>
+                <p class="disciplina">Desenvolvimento Web - Samuel Ferreira Souto</p>
             </div>
 
-            <!-- Redes Sociais com Image Replacement solicitada na especificação -->
-            <ul class="social">
-                <li><a href="http://facebook.com/minhaloja">Facebook</a></li>
-                <li><a href="http://twitter.com/minhaloja">Twitter</a></li>
+            <ul class="social">                             <!--Tirar o poder das páginas aleatórias-->
+                <li><a href="http://facebook.com/minhaloja" target="_self" rel="noopener nofollow noreferrer">Facebook</a></li>
+                <li><a href="http://twitter.com/minhaloja" target="_self" rel="noopener nofollow noreferrer">Twitter</a></li>
             </ul>
         </div>
     </footer>
-
 </body>
 </html>

@@ -1,15 +1,5 @@
 @charset "UTF-8";
 
-/* ==========================================================================
-   ATIVIDADE PRÁTICA: DESENVOLVIMENTO DE INTERFACE WEB (HTML5 & CSS3)
-   Disciplina: Desenvolvimento Web
-   Professor: Alyson Trindade Fernandes
-   Aluno: NexusTech Store Front-End
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   Configurações Gerais e Tipografia Base
-   -------------------------------------------------------------------------- */
 body {
     font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #1e293b;
@@ -17,14 +7,6 @@ body {
     line-height: 1.5;
 }
 
-/* --------------------------------------------------------------------------
-   1. ESTRUTURA DE ARQUIVOS E CABEÇALHO SEMÂNTICO (2,0 PONTOS)
-   - Classe .container com largura fixa de 940px centralizada (margin: 0 auto)
-   - <header> com position: relative
-   - Sacola de compras fixada no canto superior direito (position: absolute; top: 0; right: 0)
-   - Menu de navegação no canto inferior direito (position: absolute; bottom: 0; right: 0)
-   - Itens <li> do menu na horizontal com display: inline-block
-   -------------------------------------------------------------------------- */
 .container {
     width: 940px;
     margin: 0 auto;
@@ -39,7 +21,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* Logotipo da Loja */
 header h1 {
     float: left;
     margin: 0;
@@ -51,7 +32,6 @@ header h1 img {
     display: block;
 }
 
-/* Indicação da Sacola/Carrinho de Compras (position: absolute; top: 0; right: 0;) */
 header .sacola {
     position: absolute;
     top: 0;
@@ -74,7 +54,6 @@ header .sacola strong {
     font-weight: 700;
 }
 
-/* Menu de Navegação Primário (position: absolute; bottom: 0; right: 0;) */
 header .menu-principal {
     position: absolute;
     bottom: 0;
@@ -106,24 +85,12 @@ header .menu-principal a:hover {
     background-color: #f0f9ff;
 }
 
-/* --------------------------------------------------------------------------
-   2. ÁREA DE DESTAQUE COM BUSCA E MENU LATERAL (2,5 PONTOS)
-   - Formulário de busca: <section class="busca"> com vertical-align: middle
-   - Menu lateral: <section class="menu-departamentos">
-   - Sublista de subcategorias inicia oculta (display: none)
-   - No hover do item pai exibe sublista (:hover -> display: block)
-   - Flutuações:
-       * busca -> float: left
-       * menu-departamentos -> float: left; clear: left (obrigatório)
-       * banner de destaque -> ao lado direito (float: right)
-   -------------------------------------------------------------------------- */
 .area-destaque {
     margin-bottom: 30px;
-    /* Clearfix para conter os elementos flutuantes */
+    /* Clearfix doss elementos flutuantes */
     overflow: hidden;
 }
 
-/* Seção de Formulário de Busca */
 .busca {
     float: left;
     width: 240px;
@@ -177,10 +144,9 @@ header .menu-principal a:hover {
     transform: scale(1.1);
 }
 
-/* Menu Lateral de Departamentos */
 .menu-departamentos {
     float: left;
-    clear: left; /* Obrigatório para não subir ao lado do campo de busca */
+    clear: left; 
     width: 240px;
     margin-top: 15px;
     background-color: #ffffff;
@@ -227,9 +193,6 @@ header .menu-principal a:hover {
     padding-left: 10px;
 }
 
-/* Efeito Sanfona em CSS Puro:
-   A sublista de subcategorias inicia oculta (display: none)
-   e aparece apenas ao passar o cursor sobre o item pai (:hover -> display: block) */
 .menu-departamentos li ul {
     display: none;
     background-color: #f8fafc;
@@ -254,7 +217,6 @@ header .menu-principal a:hover {
     font-weight: 600;
 }
 
-/* Banner de Destaque */
 .banner-destaque {
     float: right;
     width: 670px;
@@ -268,13 +230,6 @@ header .menu-principal a:hover {
     box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
 }
 
-/* --------------------------------------------------------------------------
-   3. VITRINE DE PRODUTOS COM DISPLAY INLINE-BLOCK (2,5 PONTOS)
-   - Duas seções irmãs: .novidades e .mais-vendidos
-   - Flutuação lado a lado: float: left e float: right, largura ~445px
-   - Lista com display: inline-block e vertical-align: top
-   - Fundo suave com linear-gradient() e cantos com border-radius
-   -------------------------------------------------------------------------- */
 .vitrine {
     margin-bottom: 40px;
     overflow: hidden; /* Clearfix para conter os dois painéis flutuantes */
@@ -288,14 +243,12 @@ header .menu-principal a:hover {
     border: 1px solid #e2e8f0;
 }
 
-/* Painel Novidades (Flutuando à Esquerda) */
 .painel.novidades {
     float: left;
     background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
     border-color: #bae6fd;
 }
 
-/* Painel Mais Vendidos (Flutuando à Direita) */
 .painel.mais-vendidos {
     float: right;
     background: linear-gradient(180deg, #fef2f2 0%, #fee2e2 100%);
@@ -327,8 +280,6 @@ header .menu-principal a:hover {
     text-align: center;
 }
 
-/* Estruturação dos Produtos no Painel:
-   Itens <li> alinhados lado a lado com display: inline-block e vertical-align: top */
 .painel li {
     display: inline-block;
     vertical-align: top;
@@ -341,8 +292,6 @@ header .menu-principal a:hover {
     border: 1px solid #e2e8f0;
     text-align: center;
     position: relative;
-
-    /* Requisito 5.2: Transição suave e contínua */
     transition: all 0.5s ease;
 }
 
@@ -384,14 +333,6 @@ header .menu-principal a:hover {
     color: #dc2626;
 }
 
-/* --------------------------------------------------------------------------
-   5. EFEITOS CSS3 AVANÇADOS, PSEUDO-CLASSES E TRANSIÇÕES (1,5 PONTO)
-   - 5.1 Pseudo-elemento ::before nos itens das subcategorias
-   - 5.2 Efeito hover com scale(1.15), box-shadow, rgba() e transition: all 0.5s ease
-   - 5.3 Pseudo-classe :nth-child com leve rotação horária (2n) e anti-horária (2n+1)
-   -------------------------------------------------------------------------- */
-
-/* 5.1 Pseudo-elemento ::before nos itens das subcategorias */
 .menu-departamentos li ul li::before {
     content: "▸ ";
     color: #0284c7;
@@ -399,21 +340,12 @@ header .menu-principal a:hover {
     margin-right: 2px;
 }
 
-/* 5.2 Hover nos cards de produtos:
-   - Aumento sutil com scale(1.15)
-   - Sombra externa destacada com box-shadow
-   - Fundo com leve transparência utilizando rgba()
-   - Transição suave através de transition: all 0.5s ease; */
 .painel li:hover {
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 12px 24px rgba(15, 23, 42, 0.22);
     z-index: 10;
 }
 
-/* 5.3 Pseudo-classe :nth-child:
-   - Posições pares (:nth-child(2n):hover): giram levemente no sentido horário (rotate(3deg))
-   - Posições ímpares (:nth-child(2n+1):hover ou :nth-child(odd):hover): giram no sentido anti-horário (rotate(-3deg))
-   Ambos mantêm o scale(1.15) definido para o hover */
 .painel li:nth-child(2n):hover {
     transform: scale(1.15) rotate(3deg);
 }
@@ -422,16 +354,9 @@ header .menu-principal a:hover {
     transform: scale(1.15) rotate(-3deg);
 }
 
-/* --------------------------------------------------------------------------
-   4. RODAPÉ SEMÂNTICO E SUBSTITUIÇÃO DE IMAGEM (1,5 PONTO)
-   - <footer> com largura de 100%, fundo próprio e clear: both
-   - .container interno com limite de 940px
-   - Redes sociais com Image Replacement (display: block, text-indent: -9999px)
-   - Seletores de atributo a[href*="facebook.com"] e a[href*="twitter.com"]
-   -------------------------------------------------------------------------- */
 footer {
     width: 100%;
-    clear: both; /* Obrigatório para não colidir com os painéis flutuantes */
+    clear: both; 
     background-color: #0f172a;
     background-image: url('../img/fundo-rodape.png');
     background-repeat: repeat;
@@ -442,7 +367,7 @@ footer {
 }
 
 .rodape-conteudo {
-    overflow: hidden; /* Clearfix interno */
+    overflow: hidden;
 }
 
 .rodape-info {
@@ -462,7 +387,6 @@ footer {
     color: #64748b;
 }
 
-/* Redes Sociais com Image Replacement */
 ul.social {
     float: right;
     margin: 0;
@@ -478,7 +402,7 @@ ul.social a {
     display: block;
     width: 36px;
     height: 36px;
-    text-indent: -9999px; /* Esconde o texto acessível para Image Replacement */
+    text-indent: -9999px; 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -491,7 +415,6 @@ ul.social a:hover {
     opacity: 0.9;
 }
 
-/* Seletores de Atributo para as Imagens de Fundo */
 ul.social a[href*="facebook.com"] {
     background-image: url('../img/facebook.png');
 }
